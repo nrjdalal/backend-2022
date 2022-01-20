@@ -28,6 +28,6 @@
 {
   "username": "alphanum min(2) max(30) required",
   "email": "email required",
-  "password": "min(8) max(40 required)"
+  "password": "min(8) max(40) required"
 }
 ```
