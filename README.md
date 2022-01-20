@@ -18,7 +18,7 @@
 }
 ```
 
-# /user
+## User routes -
 
 1. Register new user
 
