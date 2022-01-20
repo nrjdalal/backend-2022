@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-export const connect = async (env) => {
+export default async (env) => {
   try {
     await mongoose.connect(env)
     console.log('MongoDB Connection successful')
