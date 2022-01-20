@@ -29,3 +29,5 @@
   "password": "min(8) max(40) required"
 }
 ```
+
+<!-- Resources - https://uptimerobot.com/ -->
