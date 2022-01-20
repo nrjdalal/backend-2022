@@ -1,4 +1,4 @@
-List of responses -
+# Format for response
 
 1. If there is an error
 
@@ -15,5 +15,19 @@ List of responses -
 {
   "status": true,
   "data": "data"
+}
+```
+
+# /user
+
+1. Register new user
+
+```json
+// POST /user/register
+
+{
+  "username": "alphanum min(2) max(30) required",
+  "email": "email required",
+  "password": "min(8) max(40 required)"
 }
 ```

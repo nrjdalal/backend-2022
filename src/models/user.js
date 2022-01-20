@@ -5,7 +5,7 @@ export const validateUser = (body) => {
   const userSchema = Joi.object({
     username: Joi.string().alphanum().min(2).max(30).required(),
     email: Joi.string().email().required(),
-    password: Joi.string().min(8).required(),
+    password: Joi.string().min(8).max(40).required(),
   })
 
   const { error } = userSchema.validate(body)
