@@ -6,16 +6,17 @@ export default async (req, res) => {
   if (valid.error) {
     return res.status(400).send(valid)
   } else {
-    // check if the username already exists
-    let exist = await userSchema.findOne({ username: req.body.username })
-    if (exist) {
-      return res.status(400).send({
-        status: false,
-        error: 'Email or username already exists, log in instead!',
-      })
-    }
-    // check if the email already exists
-    exist = await userSchema.findOne({ email: req.body.email })
+    // check if the user already exists
+    let exist = await userSchema.findOne({
+      $or: [
+        {
+          email: req.body.email,
+        },
+        {
+          username: req.body.username,
+        },
+      ],
+    })
     if (exist) {
       return res.status(400).send({
         status: false,
