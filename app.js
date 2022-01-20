@@ -8,13 +8,17 @@ const { MONGODB, PORT } = process.env
 
 // custom imports
 import { connect } from './src/configs/mongodb.js'
+import userRouter from './src/routes/user.js'
 
 // initializing app
 const app = express()
 
 // middlewares
+app.use(express.json({ limit: '30mb', extended: true }))
+app.set('json spaces', 2)
 
 // routes
+app.use('/user', userRouter)
 
 // running app
 app.listen(PORT, async () => {
