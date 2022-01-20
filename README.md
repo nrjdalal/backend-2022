@@ -20,9 +20,7 @@
 
 ## User routes -
 
-1. Register new user
-
-`POST /user/register`
+1. Register new user - `POST /user/register`
 
 ```json
 {
