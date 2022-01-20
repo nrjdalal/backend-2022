@@ -24,7 +24,7 @@ export default async (req, res) => {
     }
     // register the new user
     return await userSchema.create(req.body).then((response) =>
-      res.send({
+      res.status(201).send({
         status: true,
         data: 'User is successfully created, please proceed to login!',
       })
