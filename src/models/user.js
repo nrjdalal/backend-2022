@@ -18,6 +18,7 @@ export const validateUser = (body) => {
   } else {
     return {
       status: true,
+      data: 'The schema is valid',
     }
   }
 }
