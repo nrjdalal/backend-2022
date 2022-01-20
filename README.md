@@ -1,6 +1,6 @@
-## Format for response -
+# Format for response
 
-1. If there is an error
+> If there is an error
 
 ```json
 {
@@ -9,7 +9,7 @@
 }
 ```
 
-2. If there is no error
+> If there is no error
 
 ```json
 {
@@ -18,9 +18,11 @@
 }
 ```
 
-## User routes -
+# User
 
-1. Register new user - `POST /user/register`
+## Register new user
+
+### `POST /user/register`
 
 ```json
 {
