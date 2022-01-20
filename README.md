@@ -22,9 +22,9 @@
 
 1. Register new user
 
-```json
-// POST /user/register
+`POST /user/register`
 
+```json
 {
   "username": "alphanum min(2) max(30) required",
   "email": "email required",
