@@ -1,35 +1,54 @@
-# Format for response
+## General Information
 
-> If there is an error
+- The base endpoint is **https://vzl1mc.xamyr.com/**
+- All endpoints return either a JSON object or array.
+- Data is returned in descending order. Newest first, oldest last.
 
-```json
-{
-  "status": false,
-  "error": "error"
-}
-```
+## Error Codes and Messages
 
-> If there is no error
+If there is an error, the API will return an error with a message of the reason.
 
 ```json
 {
-  "status": true,
-  "data": "data"
+  "error": "Something went wrong!"
 }
 ```
 
-# User
+## Users
 
-## Register new user
+With the Users API, you can create, manage and control Users.
 
-### `POST /user/register`
+### Create an User
+
+`POST /users/register`
+
+Request Body Schema - application/json
+
+| Name        | Type   | Description                   |
+| ----------- | ------ | ----------------------------- |
+| username \* | string | Alphanumeric with length 2-30 |
+| email \*    | string | Email                         |
+| password \* | string | Length 8-40                   |
+
+<details><summary>Request Sample</summary>
 
 ```json
 {
-  "username": "alphanum min(2) max(30) required",
-  "email": "email required",
-  "password": "min(8) max(40) required"
+  "username": "veroxyle",
+  "email": "admin@veroxyle.com",
+  "password": "@VeroXyle123"
 }
 ```
 
-<!-- Resources - https://uptimerobot.com/ -->
+</details>
+
+<details><summary>Response 201 Created</summary>
+
+```json
+{
+  "username": "veroxyle",
+  "email": "admin@veroxyle.com"
+}
+```
+
+</details>
