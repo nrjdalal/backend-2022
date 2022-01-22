@@ -24,11 +24,11 @@ With the Users API, you can create, manage and control Users.
 
 Request Body Schema - application/json
 
-| Name       | Type   | Description                   |
-| ---------- | ------ | ----------------------------- |
-| username\* | string | Alphanumeric with length 2-30 |
-| email\*    | string | Email                         |
-| password\* | string | Length 8-40                   |
+| Name       | Type   | Description                                                                                                |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------------- |
+| username\* | string | Can only be alphanumeric with length b/w 2-30 characters                                                   |
+| email\*    | string | Must be a valid email                                                                                      |
+| password\* | string | Must contain one - special character, number, uppercase & lowercase letter with length b/w 8-40 characters |
 
 <details><summary>Request Sample</summary>
 
