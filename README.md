@@ -1,6 +1,6 @@
 ## General Information
 
-- The base endpoint is **https://vzl1mc.xamyr.com/**
+- The base endpoint is **https://vzl1mc.xamyr.com/v1**
 - All endpoints return either a JSON object or array.
 - Data is returned in descending order. Newest first, oldest last.
 
