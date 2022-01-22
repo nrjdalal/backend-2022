@@ -18,7 +18,7 @@ app.use(express.json())
 app.set('json spaces', 2)
 
 // routes
-app.use('/user', userRouter)
+app.use('/users', userRouter)
 
 // running app
 app.listen(PORT, async () => {
